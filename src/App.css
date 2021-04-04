@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 8vh;
+  position: absolute;
+  width: 100%;
+}
+
+.navbar__logo {
+  display: flex;
+  color: white;
+  opacity: 0.85;
+  font-size: 2rem;
+}
+
+.navbar__logo > h4 {
+  margin-left: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.navbar__navlinks {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.navbar__link {
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.navbar__link a {
+  color: white;
+}
+
+.navbar__link a:hover {
+  color: #ccc;
+}
+
+.main {
+  background: url("https://i.pinimg.com/originals/42/d9/bc/42d9bc069eda8bfbe6ed3abd1b6182e2.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hamburger-toggle {
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    overflow: hidden;
+  }
+  .hamburger-toggle {
+    display: block;
+  }
+  .navbar__navlinks {
+    position: absolute;
+    right: 110px;
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    width: 28%;
+    align-items: flex-end;
+    top: 6vh;
+    /* border-radius: 0.5rem; */
+    padding: 1rem;
+    background-color: #333;
+    transform: translate(200%);
+    transition: transform 0.5s ease-in;
+  }
+  .active {
+    transform: translate(0%);
+  }
+}
+
+.showcase {
+  min-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.showcase h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  color: white;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.showcase h2 {
+  font-size: 2rem;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.showcase__btn-services {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.showcase__btn-services:hover {
+  opacity: 1;
+}
+
+.showcase__btn-about {
+  border: 1px solid white;
+  background-color: white;
+  padding: 0.6rem 2rem;
+  margin: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.showcase__btn-about:hover {
+  opacity: 0.9;
+}
